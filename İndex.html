@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATM App</title>
+<link rel="stylesheet" href="./Css/App.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <div id="loginBox" class="card">
+        <h2>ATM Giriş</h2>
+        <input type="text" id="accountNumber" placeholder="Hesap Numarası">
+        <input type="password" id="password" placeholder="Şifre">
+        <button onclick="login()">Giriş Yap</button>
+        <p id="loginError"></p>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="card hidden">
+        <h2 id="welcome"></h2>
+
+        <p><strong>Bakiye:</strong> ₺<span id="balance"></span></p>
+        <p><strong>Kredi Kartı Borcu:</strong> ₺<span id="debt"></span></p>
+
+        <input type="number" id="amount" placeholder="Tutar">
+
+        <div class="buttons">
+            <button onclick="deposit()">Para Yatır</button>
+            <button onclick="withdraw()">Para Çek</button>
+            <button onclick="payDebt()">Borç Öde</button>
+        </div>
+
+        <button class="logout" onclick="logout()">Çıkış Yap</button>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="./Js/App.js"></script>
+</body>
+</html>
